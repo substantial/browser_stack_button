@@ -5,8 +5,9 @@ module BrowserStackButton
     end
 
     def each_browser_stack_browser_and_url
-      yield "hello", "world"
-
+      BrowserStackButton.configuration.browsers.each do |name, options|
+        yield name, "world"
+      end
     end
   end
 end

@@ -43,7 +43,7 @@ These options are applied to all browsers, but can be overridden by the
 individual browser settings.
 
 ```ruby
-  config.default_browser_options = {
+  config.default_options = {
     os: "Windows",
     start: "true",
     speed: "2",

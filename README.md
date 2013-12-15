@@ -1,7 +1,8 @@
 # BrowserStackButton
 
 BrowserStackButton adds a button to your page to allow you to quickly and
-easily view the page you are looking at in BrowserStack.
+easily view the page you are looking at in BrowserStack. It is currently set up
+to work on a Rails project but could probably be used in Sinatra or the like.
 
 ## Installation
 
@@ -65,7 +66,7 @@ individual browser settings.
 
 ## Usage
 
-Add the following just after your opening body tag:
+Add the following just after your opening `<body>` tag:
 
 ```erb
 <%= browser_stack_button %>
@@ -73,10 +74,10 @@ Add the following just after your opening body tag:
 
 If you want to enable it, likely only on a staging server, you can call
 call `BrowserStackButton.enable!` in a `before_filter` or in your controller
-action.
+action if you want to enable it in the current Rails environment.
 
 You could enable it on production for just admin users or whatever you like. We
-only use it on our staging server. 
+only use it on our staging server.
 
 Sometimes you need to add additional parameters to your site url that is
 visited by BrowserStack. We use this for a login backdoor on our staging server
@@ -99,7 +100,7 @@ end
 
 Once enabled, you should see a BrowserStack logo in the top left of the page.
 Click it to reveal a dropdown and select a browser. You will need to enable
-popups When changing browsers, it is best to close the previous browser window
+popups. When changing browsers, it is best to close the previous browser window
 before clicking the next one.
 
 ## Todo

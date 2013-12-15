@@ -1,5 +1,3 @@
-require "browser_stack_button/version"
-
-module BrowserStackButton
-  # Your code goes here...
-end
+require_relative "browser_stack_button/version"
+require_relative "browser_stack_button/railtie"
+require_relative "browser_stack_button/engine"

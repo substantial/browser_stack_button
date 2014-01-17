@@ -42,7 +42,7 @@
 .browser-stack-button-link
   text-align: left
   border: 0
-  width: 150px
+  width: 180px
   display: block
   background: #EEE
   padding: 10px
@@ -50,9 +50,16 @@
   &:hover
     background: #CCC
 
+.browser-stack-button-done:after
+  float: right
+  content: '\2713'
+
 .browser-stack-button-close
   @extend .browser-stack-button-link
   border-bottom: 1px solid #BBB
+  &:after
+    float: right
+    content: '\00d7'
 
 .browser-stack-button-link-current
   color: white

@@ -1,6 +1,10 @@
 #= require jquery
 
 $ ->
+  $(document).click (evt) ->
+    return if $(evt.target).hasClass('browser-stack-button-button')
+    $('.browser-stack-button-list').hide()
+
   $('.browser-stack-button-button').click ->
     $('.browser-stack-button-list').show()
 
@@ -9,6 +13,7 @@ $ ->
 
   $('.browser-stack-button-link').click (evt) ->
     evt.preventDefault()
+    $(this).addClass('browser-stack-button-done')
     $('.browser-stack-button-list').hide()
 
     $('.browser-stack-button-button').addClass('browser-stack-button-loading')

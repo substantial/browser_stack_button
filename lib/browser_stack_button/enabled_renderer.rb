@@ -1,22 +1,23 @@
+require_relative 'button'
+
 module BrowserStackButton
   class EnabledRenderer
-    attr_reader :configuration
+    attr_reader :configuration, :button_block
 
-    Configuration = Struct.new(:url_params, :url) do
-    end
-
-    def initialize(&block)
-      @configuration = default_configuration
-      block.call @configuration if block_given?
+    def initialize(configuration, &block)
+      @configuration = configuration
+      @button_block = block
     end
 
     def render_to(context)
-      context.render "browser_stack_button/button"
+      context.render "browser_stack_button/button", button: create_button(context)
     end
 
     private
-    def default_configuration
-      Configuration.new({}, nil)
+    def create_button(context)
+      button = BrowserStackButton::Button.new(configuration, context)
+      button_block.call button
+      button
     end
   end
 end

@@ -6,7 +6,7 @@
       <li>
         <button>Close</button>
       </li>
-      <%- each_browser_stack_browser_and_url do |browser, url| -%>
+      <%- button.each_browser_and_url do |browser, url| -%>
       <li>
         <%= link_to "View in #{browser}", url, class: "browser-stack-link" %>
       </li>

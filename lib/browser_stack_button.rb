@@ -24,7 +24,7 @@ module BrowserStackButton
     end
 
     def enable!(&block)
-      self.renderer = EnabledRenderer.new(&block)
+      self.renderer = EnabledRenderer.new(configuration, &block)
     end
 
     private

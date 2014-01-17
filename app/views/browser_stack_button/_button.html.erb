@@ -1,14 +1,15 @@
 <%= stylesheet_link_tag "browser_stack_button" %>
 <%= javascript_include_tag "browser_stack_button" %>
-<div id="browser-stack-button">
-  <div>
-    <ul>
+<div class="browser-stack-button">
+  <div class="browser-stack-button-menu">
+    <div class="browser-stack-button-button"></div>
+    <ul class="browser-stack-button-list">
       <li>
-        <button>Close</button>
+        <button class="browser-stack-button-close">Close</button>
       </li>
       <%- button.each_browser_and_url do |browser, url| -%>
       <li>
-        <%= link_to "View in #{browser}", url, class: "browser-stack-link" %>
+        <%= link_to "View in #{browser}", url, class: "browser-stack-button-link" %>
       </li>
       <%- end -%>
     </ul>

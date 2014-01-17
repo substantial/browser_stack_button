@@ -1,0 +1,58 @@
+.browser-stack-button
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 9999999
+
+.browser-stack-button-button
+  width: 42px
+  height: 41px
+  opacity: 0.5
+  cursor: pointer
+  background: image-url('browser_stack.png') no-repeat no-repeat
+  -webkit-transition: all 0.2s
+  -moz-transition: all 0.2s
+  -o-transition: all 0.2s
+  transition: all 0.2s
+  -webkit-backface-visibility: hidden
+
+  &:hover
+    opacity: 1.0
+
+.browser-stack-button-loading
+  -webkit-animation: browser-stack-loading 1s infinite linear
+
+@-webkit-keyframes browser-stack-loading
+  0%
+    opacity: 0.5
+    -webkit-transform: rotate(0deg)
+  50%
+    opacity: 1
+  100%
+    opacity: 0.5
+    -webkit-transform: rotate(359deg)
+
+.browser-stack-button-list
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  border: 4px solid #333
+
+.browser-stack-button-link
+  text-align: left
+  border: 0
+  width: 150px
+  display: block
+  background: #EEE
+  padding: 10px
+  cursor: pointer
+  &:hover
+    background: #CCC
+
+.browser-stack-button-close
+  @extend .browser-stack-button-link
+  border-bottom: 1px solid #BBB
+
+.browser-stack-button-link-current
+  color: white

@@ -34,8 +34,8 @@ end
 
 By default BrowserStackButton will not render any buttons for any browsers.
 You need to set them up as described below.
-TODO: NEED LINK
-Refer to the [Browser Stack API documentation]() for what each setting means.
+Refer to the [Browser Stack API documentation](http://www.browserstack.com/integrations#integration-parameters)
+for what each setting means.
 
 #### Default options
 

@@ -94,7 +94,7 @@ BrowserStackButton.enable! do |button|
   end
 
   # OR override the URL entirely
-  browser.url = "http://example.com"
+  button.url = "http://example.com"
 end
 ```
 
